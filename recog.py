@@ -28,20 +28,7 @@ while True:
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         id,conf = rec.predict(gray[y:y+h,x:x+w])
-        if id==1:
-            id="muthal"
-        if id==2:
-            id="abj"
-        if id==3:
-            id="gauri"
-        if id==4:
-            id="preetam"
-        if id==5:
-            id="rajo ranni"
-        if id==6:
-            id="cr7"
-        if id==7:
-            id="cr7"
+        
         cv2.cv.PutText(cv2.cv.fromarray(img),str(id),(x,y+h),font,255)
         # roi_gray = gray[y:y+h,x:x+w]
         # roi_color = img[y:y+h,x:x+w]
